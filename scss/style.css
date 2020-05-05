@@ -1,0 +1,232 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+/* basic elements */
+@import url("https://fonts.googleapis.com/css?family=Jost:400,700,700i,900,900i&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 2.5em;
+}
+
+.page-wrapper {
+  background-color: #f53d3d;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  -webkit-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+div[role="article"] {
+  padding: 15px;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.intro header[role="banner"] {
+  background: #f53d3d;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.intro header[role="banner"] h1,
+.intro header[role="banner"] h2 {
+  text-align: center;
+  width: 50%;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.intro .summary {
+  background: #1c1c1c;
+  color: white;
+  width: 50%;
+  font-size: 1.5rem;
+  height: 20%;
+}
+
+.intro .summary a:hover {
+  color: black;
+  background: white;
+}
+
+.intro .preamble {
+  background: #f53d3d;
+  font-size: 1.3rem;
+  width: 50%;
+  height: 100%;
+}
+
+div[role="main"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div[role="main"] .explanation {
+  background: #f53d3d;
+  padding: 15px;
+  width: 60%;
+  font-size: 1.7rem;
+}
+
+div[role="main"] .participation {
+  background-color: #1c1c1c;
+  color: white;
+  width: 40%;
+  padding-top: 140px;
+  font-size: 1.4rem;
+}
+
+div[role="main"] .participation a:hover {
+  color: black;
+  background: white;
+}
+
+div[role="main"] .benefits {
+  width: 45%;
+  background-color: #1c1c1c;
+  color: white;
+  font-size: 1.4rem;
+  height: 100%;
+}
+
+div[role="main"] .requirements {
+  width: 55%;
+  background-color: #f53d3d;
+  font-size: 1.5rem;
+}
+
+div[role="main"] .requirements a:hover {
+  color: white;
+  background: #1c1c1c;
+}
+
+footer {
+  width: 100%;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+footer a {
+  padding: 5px;
+}
+
+footer a:nth-of-type(2n + 1) {
+  background: #1c1c1c;
+  color: white;
+}
+
+footer a:nth-of-type(2n + 1):hover {
+  color: #1c1c1c;
+  background: white;
+}
+
+footer a:nth-of-type(2n) {
+  background: white;
+  color: #1c1c1c;
+}
+
+footer a:nth-of-type(2n):hover {
+  color: white;
+  background: #1c1c1c;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.sidebar .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .wrapper ul li {
+  font-size: 1.4rem;
+  padding: 5px;
+  padding-left: 30px;
+}
+
+.sidebar .wrapper ul li:nth-of-type(2n) {
+  color: white;
+  background: #1c1c1c;
+}
+
+.sidebar .wrapper ul li:nth-of-type(2n) a:hover {
+  color: #1c1c1c;
+  background: white;
+}
+
+.sidebar .wrapper ul li:nth-of-type(2n + 1) {
+  color: #1c1c1c;
+  background: white;
+}
+
+.sidebar .wrapper ul li:nth-of-type(2n + 1) a:hover {
+  color: white;
+  background: #1c1c1c;
+}
+
+.sidebar .wrapper h3 {
+  font-size: 1.8rem;
+  padding-left: 15px;
+}
+
+.sidebar .wrapper .design-selection {
+  width: 100%;
+}
+
+.sidebar .wrapper .design-archives,
+.sidebar .wrapper .zen-resources {
+  width: 50%;
+}

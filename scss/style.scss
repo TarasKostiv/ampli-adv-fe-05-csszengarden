@@ -1,0 +1,235 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+
+@import url("https://fonts.googleapis.com/css?family=Jost:400,700,700i,900,900i&display=swap");
+$main-red: #f53d3d;
+$main-black: #1c1c1c;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 2.5em;
+}
+
+.page-wrapper {
+  background-color: $main-red;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  transition: background 0.3s, color 0.3s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+div[role="article"] {
+  padding: 15px;
+}
+
+// abbr {
+//   transition: background 0.4s, color 0.4s;
+//   &:hover {
+//     background: black;
+//     color: white;
+//   }
+// }
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  header[role="banner"] {
+    background: $main-red;
+    width: 100%;
+    display: flex;
+
+    h1,
+    h2 {
+      text-align: center;
+      width: 50%;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
+
+  // div[role="article"] {
+  // }
+  .summary {
+    background: $main-black;
+    color: white;
+    width: 50%;
+    font-size: 1.5rem;
+    height: 20%;
+    a {
+      &:hover {
+        color: black;
+        background: white;
+      }
+    }
+  }
+
+  .preamble {
+    background: $main-red;
+    font-size: 1.3rem;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+div[role="main"] {
+  display: flex;
+  flex-wrap: wrap;
+
+  .explanation {
+    background: $main-red;
+    padding: 15px;
+    width: 60%;
+    font-size: 1.7rem;
+  }
+
+  .participation {
+    background-color: $main-black;
+    color: white;
+    width: 40%;
+    padding-top: 140px;
+    font-size: 1.4rem;
+    a {
+      &:hover {
+        color: black;
+        background: white;
+      }
+    }
+  }
+
+  .benefits {
+    width: 45%;
+    background-color: $main-black;
+    color: white;
+    font-size: 1.4rem;
+    height: 100%;
+  }
+
+  .requirements {
+    width: 55%;
+    background-color: $main-red;
+    font-size: 1.5rem;
+    a {
+      &:hover {
+        color: white;
+        background: $main-black;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+
+  a {
+    padding: 5px;
+
+    &:nth-of-type(2n + 1) {
+      background: $main-black;
+      color: white;
+      &:hover {
+        color: $main-black;
+        background: white;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      background: white;
+      color: $main-black;
+      &:hover {
+        color: white;
+        background: $main-black;
+      }
+    }
+  }
+}
+
+.sidebar {
+  width: 100%;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      li {
+        font-size: 1.4rem;
+        padding: 5px;
+        padding-left: 30px;
+        &:nth-of-type(2n) {
+          color: white;
+          background: $main-black;
+          a {
+            &:hover {
+              color: $main-black;
+              background: white;
+            }
+          }
+        }
+
+        &:nth-of-type(2n + 1) {
+          color: $main-black;
+          background: white;
+          a {
+            &:hover {
+              color: white;
+              background: $main-black;
+            }
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      padding-left: 15px;
+    }
+
+    .design-selection {
+      width: 100%;
+
+      nav {
+      }
+    }
+    .design-archives,
+    .zen-resources {
+      width: 50%;
+    }
+
+    .design-archives {
+    }
+  }
+}
