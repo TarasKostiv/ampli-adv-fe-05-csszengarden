@@ -9,7 +9,9 @@
 
 /* basic elements */
 
+@import "main-style";
 @import url("https://fonts.googleapis.com/css?family=Jost:400,700,700i,900,900i&display=swap");
+
 $main-red: #f53d3d;
 $main-black: #1c1c1c;
 
@@ -50,14 +52,6 @@ div[role="article"] {
   padding: 15px;
 }
 
-// abbr {
-//   transition: background 0.4s, color 0.4s;
-//   &:hover {
-//     background: black;
-//     color: white;
-//   }
-// }
-
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -72,11 +66,14 @@ div[role="article"] {
       width: 50%;
       font-weight: 700;
       font-size: 2rem;
+      transition: letter-spacing 0.3s;
+
+      &:hover {
+        letter-spacing: 10px;
+      }
     }
   }
 
-  // div[role="article"] {
-  // }
   .summary {
     background: $main-black;
     color: white;
@@ -84,16 +81,14 @@ div[role="article"] {
     font-size: 1.5rem;
     height: 20%;
     a {
-      &:hover {
-        color: black;
-        background: white;
-      }
+      @extend .hover-black-to-white;
     }
   }
 
   .preamble {
     background: $main-red;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    padding-top: 50px;
     width: 50%;
     height: 100%;
   }
@@ -105,7 +100,7 @@ div[role="main"] {
 
   .explanation {
     background: $main-red;
-    padding: 15px;
+
     width: 60%;
     font-size: 1.7rem;
   }
@@ -117,10 +112,7 @@ div[role="main"] {
     padding-top: 140px;
     font-size: 1.4rem;
     a {
-      &:hover {
-        color: black;
-        background: white;
-      }
+      @extend .hover-black-to-white;
     }
   }
 
@@ -130,6 +122,7 @@ div[role="main"] {
     color: white;
     font-size: 1.4rem;
     height: 100%;
+    margin-top: 230px;
   }
 
   .requirements {
@@ -137,10 +130,7 @@ div[role="main"] {
     background-color: $main-red;
     font-size: 1.5rem;
     a {
-      &:hover {
-        color: white;
-        background: $main-black;
-      }
+      @extend .hover-white-to-black;
     }
   }
 }
@@ -149,7 +139,7 @@ footer {
   width: 100%;
   font-size: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 60px;
 
@@ -159,19 +149,13 @@ footer {
     &:nth-of-type(2n + 1) {
       background: $main-black;
       color: white;
-      &:hover {
-        color: $main-black;
-        background: white;
-      }
+      @extend .hover-black-to-white;
     }
 
     &:nth-of-type(2n) {
       background: white;
       color: $main-black;
-      &:hover {
-        color: white;
-        background: $main-black;
-      }
+      @extend .hover-white-to-black;
     }
   }
 }
@@ -193,10 +177,7 @@ footer {
           color: white;
           background: $main-black;
           a {
-            &:hover {
-              color: $main-black;
-              background: white;
-            }
+            @extend .hover-black-to-white;
           }
         }
 
@@ -204,10 +185,7 @@ footer {
           color: $main-black;
           background: white;
           a {
-            &:hover {
-              color: white;
-              background: $main-black;
-            }
+            @extend .hover-white-to-black;
           }
         }
       }
@@ -220,16 +198,98 @@ footer {
 
     .design-selection {
       width: 100%;
-
-      nav {
-      }
     }
     .design-archives,
     .zen-resources {
       width: 50%;
     }
+  }
+}
 
-    .design-archives {
+@media screen and (max-width: 900px) {
+  .intro {
+    header[role="banner"] {
+      display: block;
+      h1,
+      h2 {
+        text-align: center;
+        width: 100%;
+        font-weight: 700;
+        font-size: 2rem;
+        transition: letter-spacing 0.3s;
+
+        &:hover {
+          letter-spacing: 10px;
+        }
+      }
+    }
+
+    .summary {
+      background: $main-black;
+      color: white;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    .preamble {
+      font-size: 1.4rem;
+      padding-top: 0px;
+      width: 100%;
+    }
+  }
+
+  div[role="main"] {
+    display: block;
+
+    .explanation {
+      width: 100%;
+    }
+
+    .participation {
+      width: 100%;
+      padding-top: 15px;
+    }
+
+    .benefits {
+      width: 100%;
+      margin-top: 0px;
+    }
+
+    .requirements {
+      width: 100%;
+      background-color: $main-red;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  .sidebar {
+    width: 100%;
+    .wrapper {
+      width: 100%;
+      display: block;
+
+      ul {
+        li {
+          font-size: 1.2rem;
+          padding-left: 7px;
+        }
+      }
+
+      .design-selection {
+        width: 100%;
+      }
+      .design-archives,
+      .zen-resources {
+        width: 100%;
+      }
     }
   }
 }

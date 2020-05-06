@@ -6,6 +6,16 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
 @import url("https://fonts.googleapis.com/css?family=Jost:400,700,700i,900,900i&display=swap");
+.hover-black-to-white:hover, .intro .summary a:hover, div[role="main"] .participation a:hover, footer a:hover:nth-of-type(2n + 1), .sidebar .wrapper ul li:nth-of-type(2n) a:hover {
+  color: #1c1c1c;
+  background: white;
+}
+
+.hover-white-to-black:hover, div[role="main"] .requirements a:hover, footer a:hover:nth-of-type(2n), .sidebar .wrapper ul li:nth-of-type(2n + 1) a:hover {
+  color: white;
+  background: #1c1c1c;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -67,6 +77,13 @@ div[role="article"] {
   width: 50%;
   font-weight: 700;
   font-size: 2rem;
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.intro header[role="banner"] h1:hover,
+.intro header[role="banner"] h2:hover {
+  letter-spacing: 10px;
 }
 
 .intro .summary {
@@ -77,14 +94,10 @@ div[role="article"] {
   height: 20%;
 }
 
-.intro .summary a:hover {
-  color: black;
-  background: white;
-}
-
 .intro .preamble {
   background: #f53d3d;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  padding-top: 50px;
   width: 50%;
   height: 100%;
 }
@@ -99,7 +112,6 @@ div[role="main"] {
 
 div[role="main"] .explanation {
   background: #f53d3d;
-  padding: 15px;
   width: 60%;
   font-size: 1.7rem;
 }
@@ -112,17 +124,13 @@ div[role="main"] .participation {
   font-size: 1.4rem;
 }
 
-div[role="main"] .participation a:hover {
-  color: black;
-  background: white;
-}
-
 div[role="main"] .benefits {
   width: 45%;
   background-color: #1c1c1c;
   color: white;
   font-size: 1.4rem;
   height: 100%;
+  margin-top: 230px;
 }
 
 div[role="main"] .requirements {
@@ -131,20 +139,14 @@ div[role="main"] .requirements {
   font-size: 1.5rem;
 }
 
-div[role="main"] .requirements a:hover {
-  color: white;
-  background: #1c1c1c;
-}
-
 footer {
   width: 100%;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -160,19 +162,9 @@ footer a:nth-of-type(2n + 1) {
   color: white;
 }
 
-footer a:nth-of-type(2n + 1):hover {
-  color: #1c1c1c;
-  background: white;
-}
-
 footer a:nth-of-type(2n) {
   background: white;
   color: #1c1c1c;
-}
-
-footer a:nth-of-type(2n):hover {
-  color: white;
-  background: #1c1c1c;
 }
 
 .sidebar {
@@ -202,19 +194,9 @@ footer a:nth-of-type(2n):hover {
   background: #1c1c1c;
 }
 
-.sidebar .wrapper ul li:nth-of-type(2n) a:hover {
-  color: #1c1c1c;
-  background: white;
-}
-
 .sidebar .wrapper ul li:nth-of-type(2n + 1) {
   color: #1c1c1c;
   background: white;
-}
-
-.sidebar .wrapper ul li:nth-of-type(2n + 1) a:hover {
-  color: white;
-  background: #1c1c1c;
 }
 
 .sidebar .wrapper h3 {
@@ -229,4 +211,77 @@ footer a:nth-of-type(2n):hover {
 .sidebar .wrapper .design-archives,
 .sidebar .wrapper .zen-resources {
   width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .intro header[role="banner"] {
+    display: block;
+  }
+  .intro header[role="banner"] h1,
+  .intro header[role="banner"] h2 {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2rem;
+    -webkit-transition: letter-spacing 0.3s;
+    transition: letter-spacing 0.3s;
+  }
+  .intro header[role="banner"] h1:hover,
+  .intro header[role="banner"] h2:hover {
+    letter-spacing: 10px;
+  }
+  .intro .summary {
+    background: #1c1c1c;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .intro .preamble {
+    font-size: 1.4rem;
+    padding-top: 0px;
+    width: 100%;
+  }
+  div[role="main"] {
+    display: block;
+  }
+  div[role="main"] .explanation {
+    width: 100%;
+  }
+  div[role="main"] .participation {
+    width: 100%;
+    padding-top: 15px;
+  }
+  div[role="main"] .benefits {
+    width: 100%;
+    margin-top: 0px;
+  }
+  div[role="main"] .requirements {
+    width: 100%;
+    background-color: #f53d3d;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer a {
+    font-size: 1.5rem;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar .wrapper {
+    width: 100%;
+    display: block;
+  }
+  .sidebar .wrapper ul li {
+    font-size: 1.2rem;
+    padding-left: 7px;
+  }
+  .sidebar .wrapper .design-selection {
+    width: 100%;
+  }
+  .sidebar .wrapper .design-archives,
+  .sidebar .wrapper .zen-resources {
+    width: 100%;
+  }
 }

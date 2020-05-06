@@ -1,0 +1,16 @@
+$main-red: #f53d3d;
+$main-black: #1c1c1c;
+
+.hover-black-to-white {
+  &:hover {
+    color: $main-black;
+    background: white;
+  }
+}
+
+.hover-white-to-black {
+  &:hover {
+    color: white;
+    background: $main-black;
+  }
+}
